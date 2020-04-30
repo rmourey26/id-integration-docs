@@ -198,15 +198,21 @@ This endpoint returns JSON. The scopes associated with the access token will def
 | Field | Type / Format | Description |
 | :--- | :--- | :--- |
 | `emails` | `array` | A list of email addresses belonging to the user. |
-| `institution` | `object` | The user data fields for an institutional user. |
-| `person` | `object` | The user data fields for an individual user. |
-| `verifications` | `array` | The list of verifications given to this user. |
+| `institution` | `object` | **\[Deprecated\]** The user data fields for an institutional user. |
+| `person` | `object` | **\[Deprecated\]** The user data fields for an individual user. |
+| `verifications` | `array` | **\[Deprecated\]** The list of verifications given to this user. |
+| `verification_cases` | `array` | Your verification cases for this user. |
 
-#### Institution / Person
+#### Institution / Person **\[Deprecated\]**
 
-These fields contain the last version of the user data submitted to the platform. Only one of these fields will contain data, depending upon the user representing either an institution or themselves as a person. Since the user may edit their information at any time, verified data should be looked up under the `verifications` field only. For more details on these fields, please check the [User data](user-information-retrieval.md#user-data) section below.
+These fields contain the last version of the user data submitted to the
+platform. Only one of these fields will contain data, depending upon the user
+representing either an institution or themselves as a person. Since the user
+may edit their information at any time, verified data should be looked up under
+the `verifications` field only. For more details on these fields, please check
+the [User data](user-information-retrieval.md#user-data) section below.
 
-#### Verifications
+#### Verifications **\[Deprecated\]**
 
 A verification represents information that has been validated internally by Fractal. Verifications are emitted  separately per each level and add-ons. A verification request for `light+video` will generate two verifications, one per item.
 
